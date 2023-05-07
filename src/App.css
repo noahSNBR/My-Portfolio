@@ -123,3 +123,9 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.myself {
+  height: fit-content;
+  width: fit-content;
+  margin: 50px;
+}

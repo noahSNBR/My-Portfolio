@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import './App.css';
 import snap from './Images/snapchat.png';
@@ -7,8 +6,8 @@ import whatsapp from './Images/whatsapp.png';
 import instagram from './Images/instagram.png';
 import facebook from './Images/facebook.png';
 import folder from './Images/folder.png';
-
-import intro from './Intro';
+import Intro from './Intro.js';
+import myself from './Images/PortfolioImage.png';
 
 export default function App() {
   const [heading, setHeading] = useState('My Portfolio')
@@ -86,10 +85,14 @@ export default function App() {
 
   const Introduction = () => {
     return (
-      <>
-        <button className='readIntro' onClick={() => changeIntro()} > {intoFont} </button>
-        <p style={{ textAlign: 'left', fontSize: '2em', margin: '10px' }} > {showIntro && intro} </p></>
-    )
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {showIntro && <img className='myself' src={myself} style={{ marginRight: '10px' }} />}
+        <div>
+          <button className='readIntro' onClick={() => changeIntro()} > {intoFont} </button>
+          <p style={{ fontSize: '2em', margin: '10px', textAlign: 'left' }} > {showIntro && <Intro />} </p>
+        </div>
+      </div>
+    );
   }
 
   const Projects = () => {
@@ -110,7 +113,9 @@ export default function App() {
         <div className="projects-container">
           <Project projectName='PushUpCoach-v1' link='https://github.com/noahSNBR/PushUpCoach-v1' />
           <Project projectName='PushUpCoach-v2' link='https://github.com/noahSNBR/PushUpCoach-v2' />
+          <Project projectName='Portfolio' link='https://github.com/noahSNBR/Portfolio' />
         </div>
+        <HorizontalDivider width='100vw' border='1' color='#5a189a' />
       </>
     );
   }
@@ -125,4 +130,4 @@ export default function App() {
       <Projects />
     </div>
   );
-}
+} 
