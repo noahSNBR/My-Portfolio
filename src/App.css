@@ -1,0 +1,125 @@
+.App,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100vw;
+  height: 200vh;
+  background: #10002b;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+  color: #e0aaff;
+  font-family: 'Quicksand';
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #240046;
+  width: 1em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5a189a;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9d4edd;
+}
+
+.header {
+  font-size: 20vh;
+  font-weight: 100;
+  margin: 0;
+}
+
+.reachables {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  height: 10rem;
+  transition: 350ms ease;
+}
+
+.reachables div {
+  transition: 350ms ease;
+  cursor: pointer;
+}
+
+.snap img,
+.github img,
+.whatsapp img,
+.instagram img,
+.facebook img {
+  height: 10vh;
+  width: 10vh;
+  margin: 0 auto;
+  vertical-align: text-bottom;
+  transition: 350ms ease;
+}
+
+.snap a,
+.github a,
+.whatsapp a,
+.instagram a,
+.facebook a {
+  transition: 350ms ease;
+  text-decoration: none;
+}
+
+.snap:hover,
+.github:hover,
+.whatsapp:hover,
+.instagram:hover,
+.facebook:hover {
+  scale: 1.25;
+  text-shadow: 0px 0xp 12px #5a189a;
+}
+
+.readIntro {
+  width: 60%;
+  height: 10vh;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 10px;
+  transition: 350ms ease;
+  border-radius: 50px;
+}
+
+.readIntro:hover {
+  scale: 0.9;
+  cursor: pointer;
+  background-image: linear-gradient(45deg,
+      hsl(262deg 100% 8%) 0%,
+      hsl(268deg 82% 26%) 39%,
+      hsl(268deg 82% 26%) 61%,
+      hsl(262deg 100% 8%) 100%);
+}
+
+.projFolder {
+  margin: 30px;
+}
+
+.projFolder img {
+  height: 10vh;
+  width: 10vh;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+}
